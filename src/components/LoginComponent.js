@@ -37,7 +37,7 @@ class Login extends Component{
         <div className = 'login-header'>
         
         <div class="div-block-2">
-                  <div class="w-form">
+                  <div class="w-formlog">
                   
                       <form id="email-form" name="email-form" data-name="Email Form" onSubmit ={this.handelSubmit}>
                         <lable id = 'login-username'>MERITAMERICA LOGIN</lable>
