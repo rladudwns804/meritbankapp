@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Header from  './HeaderComponent';
-
-class Transaction extends Component{
+import { getJwt} from './helper/jwt';
+ class Transaction extends Component{
 
   state = {
     account: undefined,
@@ -10,7 +10,8 @@ class Transaction extends Component{
   }
 
  async componentDidMount(){
-      axios.get(`http://localhost:8080/account/transaction/${this.state.account}`).then(res => {
+   const jwt = getJwt();
+      axios.get(`http://localhost:8080/account/transaction/0`, {headers:{Authorization : `Bearer ${jwt}`}}).then(res => {
         this.setState({transaction: res.data});})
   }
 

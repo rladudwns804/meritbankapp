@@ -18,6 +18,7 @@ import UserProfile from './UserProfileComponent';
 import Transact from './TransactComponent'
 import Sucess from './SuccessComponent';
 import Auth from './AuthComponent';
+import Transactions from './TransactionComponent';
 
 
 
@@ -48,7 +49,7 @@ class Main extends Component{
                         <Route path = "/login" component = {Login}/>
                        
 
-                        <Auth>
+              
                        
                         <Route exact path="/account" component={Account} />
                         <Route exact path = "/business" component = {Business}/>
@@ -58,7 +59,8 @@ class Main extends Component{
                         <Route exact path = "/userprofile" component = {UserProfile}/>
                         <Route exact path = "/transact" component = {Transact}/>
                         <Route exact path = "/sucess" component = {Sucess}/>
-                        </Auth>
+                        <Route exact path = "/transactions" component = {Transactions}/>
+                      
                         <Redirect to = '/home' />
                     </Switch>
                 

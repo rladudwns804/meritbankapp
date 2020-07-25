@@ -30,7 +30,7 @@ class Account extends Component {
   transaction: []
   }
 
-  
+
 
   async componentDidMount(){
     const jwt = getJwt();
@@ -49,13 +49,7 @@ class Account extends Component {
     }
   
 
-    getTransaction(props){
-      
-      return (
-          <Transaction/>
-        )
-        
-    }
+
  
  render(){
    const pcheckingAccount = this.state.pchecking.accountId;
@@ -67,13 +61,16 @@ class Account extends Component {
   }
 
 
+   const getTransaction =   
+          <Transaction />  
+    
     return (
       
         <div className="account-background">
           <Header/>
           <div className="account-view w-container">
             <h1 id="account-title"> Personal Accounts </h1>
-            <div className="view_checking" onClick={()=>this.getTransaction(this.state.pchecking.accountId)}>
+            <div className="view_checking" onClick={this.getTransaction}>
           <p id="check"> Checking Account {this.state.pchecking.accountId}:</p>
             <p id="checking-amount">${this.state.pchecking.balance}</p>
           </div>
